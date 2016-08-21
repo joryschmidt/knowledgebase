@@ -8,7 +8,7 @@ var mongo = require('mongodb');
 var mongoose = require("mongoose");
 var db = mongoose.connection;
 
-mongoose.connect('mongodb://' + process.env.IP + ':' + process.env.PORT + '/knowledgebase');
+mongoose.connect('mongodb://' + process.env.IP + '/knowledgebase');
 
 var routes = require('./routes/index');
 var articles = require('./routes/articles');
