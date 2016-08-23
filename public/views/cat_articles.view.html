@@ -1,1 +1,19 @@
-ARTICLE CATEGORIES
+<h3 class='heading'>{{ category }} Articles</h3>
+
+<div ng-controller='ArticlesCategoryCtrl'>
+  <a href="#/categories">Go Back</a>
+  <div class='row'>
+    <div class='articles'>
+      <div ng-repeat="article in cat_articles">
+        <div class='col-md-12 article'>
+          <h4>{{ article.title }}</h4>
+          <p>{{ article.body | limitTo: 100 }}<span ng-show="article.body.length > 100">...</span></p>
+          <a class='btn btn-default' href='#articles/details/{{ article._id }}'>Read</a>
+        </div>
+      </div>
+      <div ng-show="articles == false">
+        No Articles to display, so sorry
+      </div>
+    </div>
+  </div>
+</div>
