@@ -3,6 +3,12 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
+footer {
+  background-color: #ccc;
+  color: #fff;
+  text-align: center;
+}
+
 a {
   color: #00B7FF;
 }
