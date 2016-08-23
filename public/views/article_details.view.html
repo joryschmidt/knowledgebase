@@ -1,1 +1,15 @@
-ARTICLE DETAILS
+<div class='row detail'>
+  <div ng-controller='ArticleDetailsCtrl'>
+    <a href="#/articles">Go Back</a>
+    <h3 class='heading'>{{ article.title }}</h3>
+    <p>Posted on {{ article.date | date}}</p>
+  
+    <div class='col-md-12 article'>
+      <p>{{ article.body }}</p>
+      <div class='actions'>
+        <a href='#/articles/edit/{{ article.id }}' class='btn btn-default'>Edit</a>
+        <a href='#' class='btn btn-danger' ng-click='removeArticle'>Delete</a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -10,7 +10,7 @@ router.get('/', function(req, res, next) {
   });
 });
 
-router.get('/:id', function(req, res, next) {
+router.get('/details/:id', function(req, res, next) {
   Article.getArticleById(req.params.id, function(err, articles) {
     if (err) console.log(err);
     res.json(articles);
