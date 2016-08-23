@@ -4,6 +4,7 @@ body {
 }
 
 footer {
+  margin: 10px;
   background-color: #ccc;
   color: #fff;
   text-align: center;
@@ -11,4 +12,15 @@ footer {
 
 a {
   color: #00B7FF;
+}
+
+.heading {
+  background: #777;
+  color: white;
+  padding: 5px;
+}
+
+.article {
+  border-bottom: 2px solid #999;
+  padding-bottom: 10px;
 }
