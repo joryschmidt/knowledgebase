@@ -34,5 +34,7 @@ angular.module('kB')
     $http.post('/articles', data).success(function(data, status) {
       console.log(status);
     });
+    
+    $location.path('/articles');
   };
 }]);
