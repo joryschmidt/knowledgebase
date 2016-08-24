@@ -1,1 +1,21 @@
-EDIT ARTICLE
+<div ng-controller='ArticleCreateCtrl'>
+  <h3 class='heading'>Add An Article</h3>
+  <form ng-submit="addArticle()">
+    <div class='form-group'>
+      <label>Article Title</label>
+      <input type="text" name="title" ng-model="title" class="form-control" />
+    </div>
+    <div class='form-group'>
+      <label>Category</label>
+      <select name="category" ng-model="category" class="form-control">
+        <option value=""></option>
+      </select>
+    </div>
+    <div class='form-group'>
+      <label>Content</label>
+      <input type="textarea" name="body" ng-model="body" class="form-control" placeholder="What's on your mind?" />
+    </div>
+    <button type="submit" class='btn btn-default'>Submit Article</button>
+    <a class='btn btn-danger' href='/categories'>Nevermind</a>
+  </form>
+</div>

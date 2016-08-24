@@ -18,3 +18,21 @@ angular.module('kB')
     $scope.article = data;
   });
 }])
+
+.controller('ArticleCreateCtrl', ['$scope', '$http', '$routeParams', '$location', function($scope, $http, $routeParams, $location) {
+  $http.get('/categories').success(function(data) {
+    $scope.categories = data;
+  });
+  
+  $scope.addArticle = function() {
+    var data = {
+      title: $scope.title,
+      category: $scope.category,
+      body: $scope.body
+    }
+    
+    $http.post('/articles', data).success(function(data, status) {
+      console.log(status);
+    });
+  };
+}]);
