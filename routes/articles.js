@@ -41,11 +41,11 @@ router.post('/', function(req, res, next) {
   Article.createArticle(newArticle, function(err, article) {
     if (err) console.log(err);
     res.location('/articles');
-    res.redirect('/articles');
+    res.redirect(200, '/articles');
   });
 });
 
-router.put('/', function(req, res, next) {
+router.put('/edit', function(req, res, next) {
   var id = req.body.id;
   var data = {
     title: req.body.title,
@@ -56,9 +56,10 @@ router.put('/', function(req, res, next) {
   // Update the article
   Article.updateArticle(id, data, function(err, article) {
     if (err) console.log(err);
-    res.location('/articles');
-    res.redirect('/articles');
   });
+  
+    res.location('/articles');
+    res.redirect(200, '/articles');
 });
 
 router.delete('/:id', function(req, res, next) {
@@ -68,7 +69,7 @@ router.delete('/:id', function(req, res, next) {
   Article.removeArticle(id, function(err, article) {
     if (err) console.log(err);
     res.location('/articles');
-    res.redirect('/articles');
+    res.redirect(200, '/articles');
   });
 });
 

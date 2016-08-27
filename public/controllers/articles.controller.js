@@ -64,7 +64,7 @@ angular.module('kB')
       body: $scope.article.body
     };
     
-    $http.put('/articles', data).success(function(data, status) {
+    $http.put('/articles/edit', data).success(function(data, status) {
       console.log(status);
     });
     
