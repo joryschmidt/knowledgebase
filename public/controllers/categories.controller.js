@@ -4,14 +4,6 @@ angular.module('kB')
   $http.get('/categories').success(function(data) {
     $scope.categories = data;
   });
-  
-  $scope.removeCategory = function(id) {
-    $http.delete('/categories/' + id, function(data) {
-      console.log(data);
-    });
-    
-    $location.path('/categories');
-  };
 }])
 
 .controller('CategoryCreateCtrl', ['$scope', '$http', '$location', function($scope, $http, $location){
