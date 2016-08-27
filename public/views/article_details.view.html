@@ -7,8 +7,8 @@
     <div class='col-md-12 article'>
       <p>{{ article.body }}</p>
       <div class='actions'>
-        <a href='#/articles/edit/{{ article.id }}' class='btn btn-default'>Edit</a>
-        <a href='#' class='btn btn-danger' ng-click='removeArticle'>Delete</a>
+        <a href='#/articles/edit/{{ article._id }}' class='btn btn-default'>Edit</a>
+        <a href='#' class='btn btn-danger' ng-click='removeArticle()'>Delete</a>
       </div>
     </div>
   </div>
