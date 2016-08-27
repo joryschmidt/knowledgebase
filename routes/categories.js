@@ -17,4 +17,27 @@ router.get('/:id', function(req, res, next) {
   })
 });
 
+router.post('/', function(req, res, next) {
+  var newCategory = new Category({
+    name: req.body.name,
+    description: req.body.description
+  });
+  
+  Category.createCategory(newCategory, function(err) {
+    if (err) console.log(err);
+    res.location('/categories');
+    res.redirect(200, '/categories');
+  });
+});
+
+router.delete('/:id', function(req, res, next) {
+  var id = req.params.id;
+  
+  Category.removeCategory(id, function(err) {
+    if (err) console.log(err);
+    res.location('/categories');
+    res.redirect(200, '/categories');
+  });
+});
+
 module.exports = router;

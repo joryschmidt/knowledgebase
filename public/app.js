@@ -6,6 +6,10 @@ app.config(['$routeProvider', function($routeProvider) {
     templateUrl: 'views/categories.view.html',
     controller: 'CategoriesCtrl'
   })
+  .when('/categories/add', {
+    templateUrl: 'views/add_category.view.html',
+    controller: 'CategoryCreateCtrl'
+  })
   .when('/articles', {
     templateUrl: 'views/articles.view.html',
     controller: 'ArticlesCtrl'

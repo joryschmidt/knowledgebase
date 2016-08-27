@@ -8,9 +8,14 @@
           <h3>{{ category.name }}</h3>
           <p>{{ category.description }}</p>
           <a href='#/articles/category/{{ category.name }}'>View Articles</a>
+          <a ng-click="removeCategory({{ category._id }})">Remove Category</a>
         </div>
       </div>
     </div>
+  </div>
+  <br />
+  <div class='categoryREST'>
+    <a class='btn btn-default' href="#/categories/add">Add A Category</a>
   </div>
 </div>
 

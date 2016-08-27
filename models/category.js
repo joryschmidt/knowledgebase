@@ -27,3 +27,8 @@ module.exports.getCategoryById = function(id, callback) {
 module.exports.createCategory = function(newCategory, callback) {
     newCategory.save(callback);
 };
+
+// Delete a category
+module.exports.removeCategory = function(id, callback) {
+    Category.findById(id).remove(callback);
+};

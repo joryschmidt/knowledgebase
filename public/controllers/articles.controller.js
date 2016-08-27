@@ -6,10 +6,10 @@ angular.module('kB')
   });
 }])
 
-.controller('ArticlesCategoryCtrl', ['$scope', '$http', '$routeParams', function($scope, $http, $routeParams){
-  $http.get('/articles/category/'+$routeParams.category).success(function(data) {
+.controller('ArticlesCategoryCtrl', ['$scope', '$http', '$routeParams', '$location', function($scope, $http, $routeParams, $location){
+  $http.get('/articles/category/' + $routeParams.category).success(function(data) {
     $scope.cat_articles = data;
-    $scope.category = $routeParams.category
+    $scope.category = $routeParams.category;
   });
 }])
 

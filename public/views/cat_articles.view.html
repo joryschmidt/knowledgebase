@@ -2,6 +2,7 @@
 
 <div ng-controller='ArticlesCategoryCtrl'>
   <a href="#/categories">Go Back</a>
+  <button class='btn btn-danger' ng-click="removeCategory()">Delete Category</button>
   <div class='row'>
     <div class='articles'>
       <div ng-repeat="article in cat_articles">

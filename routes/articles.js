@@ -35,7 +35,7 @@ router.post('/', function(req, res, next) {
     title:    title, 
     category: category,
     body:     body
-  })
+  });
   
   // Create the article
   Article.createArticle(newArticle, function(err, article) {
