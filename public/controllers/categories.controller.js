@@ -19,4 +19,17 @@ angular.module('kB')
     
     $location.path('/categories');
   };
+}])
+
+.controller('CategoryDeleteCtrl', ['$scope', '$http', '$location', '$routeParams', function($scope, $http, $location, $routeParams) {
+  $http.get('/categories/' + $routeParams.id).success(function(data) {
+    $scope.category = data;
+  });
+  
+  $scope.removeCategory = function() {
+    $http.delete('/categories/' + $routeParams.id).success(function(data){
+      console.log(data);
+    });
+    $location.path('/categories');
+  };
 }]);
